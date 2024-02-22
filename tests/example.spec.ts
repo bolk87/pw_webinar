@@ -1,7 +1,7 @@
 import {test, expect} from '../fixtures/custom-fixtures';
 import {GET_BOOKS_LIST, ONE_BOOK_MOCK} from "../mocks/book-mocks";
 
-test.describe.only('example', () => {
+test.describe('example', () => {
     test.skip('login title', async ({page}) => {
         await page.goto('https://demoqa.com/login', {waitUntil: "domcontentloaded"})
         const title = page.locator('//h1')
