@@ -1,5 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
-import 'dotenv/config'
+import * as dotenv from "dotenv";
+
+// Can define any env file here, for example '/.env.production' for production
+// Also you can specify what env do you need with env variable
+// Example: run tests with command:
+// ENVIRONMENT='production' npx playwright test
+// and config dotenv like below:
+// dotenv.config({path: __dirname + `/.env.${process.env.ENVIRONMENT}`});
+// tests will run with variables from .env.production file
+dotenv.config({path: __dirname + '/.env'});
 
 /**
  * See https://playwright.dev/docs/test-configuration.
