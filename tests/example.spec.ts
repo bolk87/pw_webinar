@@ -22,6 +22,7 @@ test.describe('example', () => {
 
         await app.profilePage.shouldBeOpened()
         await app.profilePage.shouldHaveUserNameTitleText(userName)
+        await app.profilePage.shouldHaveUserNameTitleText(userName)
     })
 
     test('failed login', async ({app}) => {
